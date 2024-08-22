@@ -1,38 +1,58 @@
 {% extends 'lista/index_pro.html' %}
 
-{% block title %} &#x1F4F6; Agenda de Eventos {% endblock %}
+{% block title %} Agenda de Eventos {% endblock %}
 
 {% block content %}
-    <body>
-        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-    </body>
+<header>
+  <h1> Agenda de Eventos</h1>
+</header>
+
+<div class="container text-center">
+  <div class="row">
+  {% for evento in evento_list %}
+      <div class="col-4">
+        <div class="evento" id="01">
+            {% if evento.mes|date:"F" == "January" %}
+                <nav>Janeiro</nav>
+                Total de eventos {{ evento.total }}
+            {% elif evento.mes|date:"F" == "February" %}
+                <nav>Fevereiro</nav>
+                Total de eventos {{ evento.total }}
+            {% elif evento.mes|date:"F" == "March" %}
+                <nav>Março</nav>
+                Total de eventos {{ evento.total }}
+            {% elif evento.mes|date:"F" == "April" %}
+                <nav>Abril</nav>
+                Total de eventos {{ evento.total }}
+            {% elif evento.mes|date:"F" == "May" %}
+                <nav>Maio</nav>
+                Total de eventos {{ evento.total }}
+            {% elif evento.mes|date:"F" == "June" %}
+                <nav>Junho</nav>
+                Total de eventos {{ evento.total }}
+            {% elif evento.mes|date:"F" == "July" %}
+                <nav>Julho</nav>
+                Total de eventos {{ evento.total }}
+            {% elif evento.mes|date:"F" == "August" %}
+                <nav>Agosto</nav>
+                Total de eventos {{ evento.total }}
+            {% elif evento.mes|date:"F" == "September" %}
+                <nav>Setembro</nav>
+                Total de eventos {{ evento.total }}
+            {% elif evento.mes|date:"F" == "November" %}
+                <nav>Novembro</nav>
+                Total de eventos {{ evento.total }}
+            {% elif evento.mes|date:"F" == "October"%}
+             <nav>Outubro</nav>
+                Total de eventos {{ evento.total }}
+             {% elif evento.mes|date:"F" == "December"%}
+             <nav>Dezembro</nav>
+                Total de eventos {{ evento.total }}
+            {% endif %}
+        </div>
+      </div>
+{% endfor %}
 {% endblock content %}
-<!--</html>-->
+  </div>
+</div>
+

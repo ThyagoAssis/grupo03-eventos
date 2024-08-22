@@ -17,11 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from lista.views import EventoListView, sobre
+from lista.views import EventoListView, sobre, EventoCreate
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sobre/', sobre, name='sobre'),
-    path('', EventoListView.as_view(), name='evento_list')
+    path('', EventoListView.as_view(), name='evento_list'),
+    path('create/', EventoCreate.as_view(), name='evento_create')
 ]

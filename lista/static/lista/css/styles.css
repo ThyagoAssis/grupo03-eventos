@@ -1,0 +1,42 @@
+body{
+    background-image: url("https://th.bing.com/th/id/R.e82100be15b9a94d2866ad62d64e6284?rik=vXybgOWakE81hg&pid=ImgRaw&r=0");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#ul-nav{
+    margin-left: 30px;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+}
+
+h1{
+    color:#d6d5d5;
+    margin-left: 50px;
+    margin-top: 50px !important;
+}
+
+.row {
+    margin-top: 400px;
+}
+
+.evento {
+    margin-top:15px;
+    margin-left: 50px;
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    background-color: #87CEEB;
+}
+nav{
+    background-color: #1E90FF;
+    border-radius: 10px;
+    font-size: 30px;
+}
+.cadastro {
+    text-align: center;
+    color:#red;
+}

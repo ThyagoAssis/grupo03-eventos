@@ -8,13 +8,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} {% endblock %}</title>
+        <title>{% block title %} {% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'lista/css/styles.css' %}">
 </head>
 <body>
+
     {% include 'lista/_navbar01.html' %}
 
-    {% block content %}
+    <main class="container">
+         {% block content %}
 
-    {% endblock %}
+        {% endblock %}
+    </main>
 
+
+
+</body>
 </html>
+

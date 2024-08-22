@@ -1,0 +1,21 @@
+{% extends 'lista/index_pro.html' %}
+
+{% block title %} &# Agenda de Eventos {% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="cadastro">
+    <h1>Criação de Evento</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+
+       <button type="submit" class="btn btn-light">Enviar</button>
+
+    </form>
+
+</div>
+
+
+{% endblock content %}
+<!--</html>-->
