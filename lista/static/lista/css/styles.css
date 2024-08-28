@@ -40,8 +40,8 @@ h1{
 }
 nav{
     background-color: #1E90FF;
-    border-radius: 10px;
-    font-size: 30px;
+   /*  border-radius: 10px; */
+    font-size: 20px;
 }
 .cadastro {
     text-align: center;
