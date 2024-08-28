@@ -17,12 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from lista.views import EventoListView, sobre, EventoCreate
-
+from lista.views import EventosPorMesView, EventosDoMesView, EventosCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sobre/', sobre, name='sobre'),
-    path('', EventoListView.as_view(), name='evento_list'),
-    path('create/', EventoCreate.as_view(), name='evento_create')
+    path('', EventosPorMesView.as_view(), name='eventos_por_mes'),
+    path('eventos/<int:ano>/<int:mes>/', EventosDoMesView.as_view(), name='eventos_do_mes'),
+    path('create/', EventosCreateView.as_view(), name='eventos_create'),
 ]

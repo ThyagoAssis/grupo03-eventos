@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<h1>Eventos em {{ mes }}/{{ ano }}</h1>
+<ul>
+    {% for evento in eventos %}
+        <li>{{ evento.data|date:"d/m/Y" }} - {{ evento.nome }} - {{ evento.local }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'eventos_por_mes' %}">Voltar</a>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'lista/css/styles.css' %}">
+</head>
+<body>
+
+    {% include 'componentes/_navbar01.html' %}
+
+    <main class="container">
+         {% block content %}{% endblock %}
+    </main>
+
+</body>
+</html>
+
