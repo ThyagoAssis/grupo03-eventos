@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-image: url("https://th.bing.com/th/id/R.e82100be15b9a94d2866ad62d64e6284?rik=vXybgOWakE81hg&pid=ImgRaw&r=0");
     background-repeat: no-repeat;
@@ -16,12 +23,12 @@ header {
 h1{
     color:#d6d5d5;
     margin-left: 50px;
-    margin-top: 50px !important;
+    /* margin-top: 50px !important; */
 }
 
-.row {
+/* .row {
     margin-top: 400px;
-}
+}  */
 
 .evento {
     margin-top:15px;
@@ -38,5 +45,5 @@ nav{
 }
 .cadastro {
     text-align: center;
-    color:#red;
+    color: red;
 }
