@@ -1,4 +1,4 @@
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.db.models import Count
 
 from django.db.models.functions import TruncMonth
@@ -35,4 +35,17 @@ class EventosDoMesView(ListView):
 class EventosCreateView(CreateView):
     model = Evento
     fields = ["nome", "data", "hora", "numero_convidados", "local"]
+    success_url = reverse_lazy('eventos_por_mes')
+
+#Classe para editar os eventos
+class EventosUpdateView(UpdateView):
+    model = Evento
+    fields = ["nome", "data", "hora", "numero_convidados", "local"]
+    template_name = "lista/evento_form.html"
+    success_url = reverse_lazy('eventos_por_mes')
+
+#Classe para deletar os eventos
+class EventosDeleteView(DeleteView):
+    model = Evento
+    template_name = "lista/eventos_delete.html"
     success_url = reverse_lazy('eventos_por_mes')

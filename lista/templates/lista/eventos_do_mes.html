@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
 {% block content %}
 
-<h1 class="mt-3 text-center">Eventos em {{ mes }}/{{ ano }}</h1>
+<h1 class="mt-4 text-center">Eventos em {{ mes }}/{{ ano }}</h1>
 
 <table class="table table-striped text-center">
     <thead>
@@ -9,7 +9,7 @@
         <th scope="col">Evento</th>
         <th scope="col">Data</th>
         <th scope="col">Local</th>
-        <th scope="col">Ações:</th>
+        <th scope="col">Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -18,7 +18,11 @@
             <th scope="row">{{ evento.nome }}</th>
             <td>{{ evento.data|date:"d/m/Y" }}</td>
             <td>{{ evento.local }}</td>
-            <td><button type="button" class="btn btn-dark">Alterar</button></td>
+            <td>
+                <a href="{% url 'eventos_edicao' evento.pk %}" class="btn btn-outline-dark"> Alterar</a>
+                <a href="{% url 'eventos_delete' evento.pk %}" class="btn btn-outline-danger">Deletar</a>
+            </td>
+<!--            <td><button type="submit" class="btn btn-dark">Alterar</button></td>-->
         </tr>
         {% endfor %}
     </tbody>
