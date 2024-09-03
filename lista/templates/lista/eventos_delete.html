@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
 {% block content %}
 
-     <h1 id="pg-del">Deletar Aluno</h1>
+     <h1 id="pg-del"> Deletar Aluno </h1>
     <p>Tem certeza que deseja deletar o Evento: "{{ evento.nome }}"?</p>
     <form method="post" class="d-flex justify-content-sm-center">
         {% csrf_token %}

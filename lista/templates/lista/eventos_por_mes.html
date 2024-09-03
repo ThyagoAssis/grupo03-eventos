@@ -4,14 +4,14 @@
 
 {% block content %}
 
-<h1 class="mt-4 text-center"> Agenda de Eventos</h1>
+<h1 class="mt-4 text-center"> Agenda de Eventos </h1>
 <div class="container text-center" id="meses">
   <div class="row">
   {% for evento in eventos %}
       <div class="col-4 ">
         <div class="evento shadow">
             {% if evento.mes|date:"F" == "January" %}               
-                <nav>Janeiro</nav>
+                <nav> Janeiro </nav>
                 <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
             {% elif evento.mes|date:"F" == "February" %}
                 <nav>Fevereiro</nav>

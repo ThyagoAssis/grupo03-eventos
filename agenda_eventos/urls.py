@@ -17,13 +17,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from lista.views import EventosPorMesView, EventosDoMesView, EventosCreateView, EventosUpdateView, EventosDeleteView
+from lista.views import (EventosPorMesView,
+                         EventosDoMesView,
+                         EventosCreateView,
+                         EventosUpdateView,
+                         EventosDeleteView,
+                         SolicitarDadosView,
+                         EncerrarSessaoView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', EventosPorMesView.as_view(), name='eventos_por_mes'),
-    path('eventos/<int:ano>/<int:mes>/', EventosDoMesView.as_view(), name='eventos_do_mes'),
+    path('listar/', EventosPorMesView.as_view(), name='eventos_por_mes'),
     path('create/', EventosCreateView.as_view(), name='eventos_create'),
+    path('eventos/<int:ano>/<int:mes>/', EventosDoMesView.as_view(), name='eventos_do_mes'),
     path('edicao/<int:pk>/', EventosUpdateView.as_view(), name='eventos_edicao'),
     path('delete/<int:pk>/', EventosDeleteView.as_view(), name='eventos_delete'),
+
+    #Section
+    path("", SolicitarDadosView.as_view(), name='lista_section'),
+    path("encerra_sessao", EncerrarSessaoView.as_view(), name='lista_section_fim')
 ]

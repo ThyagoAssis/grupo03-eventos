@@ -1,5 +1,7 @@
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+  <nav class=" navbar navbar-expand-lg navbar-dark bg-dark shadow ">
+
+    <div class="nb collapse navbar-collapse justify-content-center">
+    {% if request.session.nome_usuario %}
       <ul class="navbar-nav" id="ul-nav">
         <li class="nav-item active">
           <a class="nav-link" href="{% url 'eventos_por_mes' %}">Início</a>
@@ -8,5 +10,12 @@
           <a class="nav-link" href="{% url 'eventos_create' %}">Novo Evento</a>
         </li>
       </ul>
+        {% endif %}
     </div>
+    <div class="col=2 mt-3">
+        {% if request.session.nome_usuario %}
+              <p id="user_logged" class="text-light"> Olá, {{ request.session.nome_usuario }}! <a href="{% url 'lista_section_fim' %}" class="text-info ms-3">Sair</a></p>
+        {% endif %}
+    </div>
+
   </nav>
