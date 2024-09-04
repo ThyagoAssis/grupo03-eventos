@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
 {% block content %}
 
-<h1 class="mt-4 text-center">Eventos em {{ mes }}/{{ ano }}</h1>
+<h1 class="mt-5 text-center">Eventos em {{ mes }}/{{ ano }}</h1>
 
 <table class="table table-striped text-center">
     <thead>
@@ -19,8 +19,8 @@
             <td>{{ evento.data|date:"d/m/Y" }}</td>
             <td>{{ evento.local }}</td>
             <td>
-                <a href="{% url 'eventos_edicao' evento.pk %}" class="btn btn-outline-dark"> Alterar</a>
-                <a href="{% url 'eventos_delete' evento.pk %}" class="btn btn-outline-danger">Deletar</a>
+                <a href="{% url 'eventos_edicao' evento.pk %}" class="btn btn-success"> Alterar</a>
+                <a href="{% url 'eventos_delete' evento.pk %}" class="btn btn-danger">Deletar</a>
             </td>
 <!--            <td><button type="submit" class="btn btn-dark">Alterar</button></td>-->
         </tr>
