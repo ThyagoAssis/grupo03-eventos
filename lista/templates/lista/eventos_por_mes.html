@@ -10,41 +10,41 @@
   {% for evento in eventos %}
       <div class="col-4 ">
         <div class="evento shadow">
-            {% if evento.mes|date:"F" == "January" %}               
-                <nav> Janeiro </nav>
+            {% if evento.mes|date:"F" == "Janeiro" %}
+            <nav> Janeiro </nav>
                 <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
-            {% elif evento.mes|date:"F" == "February" %}
-                <nav>Fevereiro</nav>
+            {% elif evento.mes|date:"F" == "Fevereiro" %}
+            <nav>Fevereiro</nav>
                 <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
-            {% elif evento.mes|date:"F" == "March" %}
-                <nav>Março</nav>
+            {% elif evento.mes|date:"F" == "Março" %}
+            <nav>Março</nav>
                 <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
-            {% elif evento.mes|date:"F" == "April" %}
-                <nav>Abril</nav>
+            {% elif evento.mes|date:"F" == "Abril" %}
+            <nav>Abril</nav>
                 <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
-            {% elif evento.mes|date:"F" == "May" %}
-                <nav>Maio</nav>
+            {% elif evento.mes|date:"F" == "Maio" %}
+            <nav>Maio</nav>
                 <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
-            {% elif evento.mes|date:"F" == "June" %}
-                <nav>Junho</nav>
+            {% elif evento.mes|date:"F" == "Junho" %}
+            <nav>Junho</nav>
                 <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
-            {% elif evento.mes|date:"F" == "July" %}
-                <nav>Julho</nav>
+            {% elif evento.mes|date:"F" == "Julho" %}
+            <nav>Julho</nav>
                 <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
-            {% elif evento.mes|date:"F" == "August" %}
-                <nav>Agosto</nav>
+            {% elif evento.mes|date:"F" == "Agosto" %}
+            <nav>Agosto</nav>
                 <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
-            {% elif evento.mes|date:"F" == "September" %}
-                <nav>Setembro</nav>
+            {% elif evento.mes|date:"F" == "Setembro" %}
+            <nav>Setembro</nav>
                 <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
-            {% elif evento.mes|date:"F" == "November" %}
-                <nav>Novembro</nav>
-                <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
-            {% elif evento.mes|date:"F" == "October"%}
+            {% elif evento.mes|date:"F" == "Outubro"%}
              <nav>Outubro</nav>
-             <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
-             {% elif evento.mes|date:"F" == "December"%}
-             <nav>Dezembro</nav>
+                <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
+            {% elif evento.mes|date:"F" == "Novembro" %}
+            <nav>Novembro</nav>
+                <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
+            {% elif evento.mes|date:"F" == "Dezembro"%}
+            <nav>Dezembro</nav>
              <a href="{% url 'eventos_do_mes' ano=evento.mes.year mes=evento.mes.month %}">Total de eventos {{ evento.total }}</a>
             {% endif %}
         </div>

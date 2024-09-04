@@ -34,7 +34,7 @@ class EventosDoMesView(ListView):
     def get_queryset(self):
         ano = self.kwargs['ano']
         mes = self.kwargs['mes']
-        return Evento.objects.filter(data__year=ano, data__month=mes).order_by('data')
+        return Evento.objects.filter(data__month=mes, data__year=ano).order_by('data')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
